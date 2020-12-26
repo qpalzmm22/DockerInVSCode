@@ -45,9 +45,11 @@ WSL는 밑의 [링크](https://docs.microsoft.com/ko-kr/windows/wsl/install-win1
     ```powershell
     2: dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
     ```
+![powershellCommands](./img/WSL_install.png)
+
 4. 다음은 [링크](https://docs.microsoft.com/ko-kr/windows/wsl/install-win10#step-4---download-the-linux-kernel-update-package)에 들어가 `kernel-update-package`를 다운받습니다.
 뭔가 이름이 멋진 링크를 눌러 다운로드를 진행시켜주면 됩니다. 
-![Kernel](./kernelDownload.png)
+![Kernel](./img/kernelDownload.png)
 5. Default setting 으로 `WSL2`로 지정합니다. 
  ```powershell
     awsl --set-default-version 2
@@ -57,29 +59,29 @@ WSL는 밑의 [링크](https://docs.microsoft.com/ko-kr/windows/wsl/install-win1
 
 <i> 참고로 `WSL`에서 실행시킨 OS에서 Local files들은 `/mnt` 안에 있습니다. 사진에서의 `/c` 는 드라이브의 이름입니다.</i>
 
-![mntFiles](./ubuntu_mnt_c.png)
+![mntFiles](./img/ubuntu_mnt_c.png)
 
 ## 2. VSCode에서 Docker 설치하기 
 
 WSL2를 정상적으로 다운로드 했다면 이제는 VSCode에서 `docker`를 검색해 `Docker` 와 `Docker Explorer` 를 install 해줍니다.
 
-![dockerExtention](./extentionDocker.png)
+![dockerExtention](./img/extentionDocker.png)
 
 ---
 또한 검색창에 `remote`를 검색해 `Remote Developement`를 설치해줍니다. 이를 설치하면 위의 4개의 `WSL`, `Containers`, `SSH` 등은 자동으로 설치가 됩니다. 
 
-![remoteExtention](./remote_Extention.png)
+![remoteExtention](./img/remote_Extention.png)
 ---
 설치를 마치면 다음과 같이 밑에 고래 아이콘이 하나 생깁니다. 이것을 누르면 아래의 그림이 나옵니다.
 
-![attachVSCode](./popInVS.png)
+![attachVSCode](./img/popInVS.png)
 
 우리가 원하는 것은 Container로 생성된 ubuntu를 VSCode로 사용하는 것이니 <span style="color:red"> 빨간색</span>으로 표시된 새로운 창을 pop up하는 버튼을 누르면 새로운 창이 뜬다.
 
-![result](./container_in_VSCode.png)
+![result](./img/container_in_VSCode.png)
 
-보이다싶히 Container의 Ubuntu가 사용되고 있는 것을 확인 할 수 있었다.
-그러면 이제 VSCode를 사용하여 Container안의 내용물을 수정할 수 있는 환경을 만들었다.
+보이다싶히 Container의 Ubuntu가 사용되고 있는 것을 확인 할 수 있습니다.
+그러면 이제 VSCode를 사용하여 Container안의 내용물을 수정할 수 있는 환경을 만들었습니다.
 
 *** 
 
